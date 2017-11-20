@@ -4117,13 +4117,13 @@ big {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #ff861e;
     border: none;
     transition: all 0.2s linear
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #2e6750;
+    background: #6bf0bb;
     transition: all 0.2s linear
 }
 
@@ -4927,9 +4927,9 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 }
 
 input[type="submit"].solid, input[type="reset"].solid, input[type="button"].solid {
-    background: #3e8a6c;
-    border-color: #3e8a6c;
-    color: #fff
+    background: #a8ada9;
+    border-color: #bbc4ce;
+    color: #fff;
 }
 
 .dt-button.featured {
@@ -9858,5 +9858,8 @@ html .woocommerce div.product div.images img:hover {
     filter: alpha(opacity=70);
     transition: all 0.3s linear
 }
+
+
+
 
 
