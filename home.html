@@ -1,13 +1,3 @@
-<?php 
-require('config.php');
-if (!isset($_GET['ciudad']) && !isset($_GET['id'])) {
-	header("Location: index.php");
-	die();
-}
-$id = $_GET['id'];
-$ciudad = $_GET['ciudad'];
-$correo = $_GET['correo'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
