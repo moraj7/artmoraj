@@ -1,0 +1,529 @@
+<?php 
+require('config.php');
+if (!isset($_GET['ciudad']) && !isset($_GET['id'])) {
+	header("Location: index.php");
+	die();
+}
+$id = $_GET['id'];
+$ciudad = $_GET['ciudad'];
+$correo = $_GET['correo'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+	<title>Art Moraj - Media Interactive Designer</title>
+
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+	<!-- CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/bootstrap2-toggle.min.css" rel="stylesheet">
+
+
+	<script src="js/bootstrap2-toggle.min.js"></script>
+	<script src="js/sweetalert-dev.js"></script>
+	<script src="js/main.js"></script>
+	<!-- <script src="js/app.min.js"></script> -->
+	<link rel="stylesheet" href="css/sweetalert.css">
+	<link rel="dns-prefetch" href="https://stag-cdn1.deliciousthemes.com" /><link rel="dns-prefetch" href="https://stag-cdn2.deliciousthemes.com" />
+	<link rel="dns-prefetch" href="https://stag-cdn3.deliciousthemes.com" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CRaleway%3A400%2C500%7CDroid+Serif%3A400italic%2C700italic" /><link rel="stylesheet" href="https://stag-cdn3.deliciousthemes.com/stag/wp-content/cache/min/1/db0359f98a32f5fecabcf0742569f477.css" data-minify="1"/><link rel="stylesheet" href="https://stag-cdn3.deliciousthemes.com/stag/wp-content/cache/min/1/65a2b58d7905143e7712ef20b3cef421.css" data-minify="1"/><link rel="stylesheet" href="https://stag-cdn3.deliciousthemes.com/stag/wp-content/cache/min/1/65adfb76c52b43f4dc64d8fa1962df28.css" data-minify="1"/><link rel="stylesheet" href="https://stag-cdn3.deliciousthemes.com/stag/wp-content/cache/min/1/82fd7cf6030964884c6deffb63e265de.css" data-minify="1"/><link rel="stylesheet" href="https://stag-cdn3.deliciousthemes.com/stag/wp-content/cache/min/1/bb26142cd1cbc36947f33111cc9e65d2.css" data-minify="1"/><script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/a21b3ff8ae1d77da2e88d7f208d14226.js" data-minify="1"></script><script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/4df41804bba1840c4d88b9d5af45b577.js" data-minify="1"></script><script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/0a3d32d6e7c798195683ec97c0ac31a0.js" data-minify="1"></script><script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/ae2fdebba96a9597b86e2c71b56368b5.js" data-minify="1"></script><script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/e031044b1f47aa7714b4eadf5f2832c7.js" data-minify="1"></script><script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/12a596825eaba6314cff2c0d559f654f.js" data-minify="1"></script> <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile" href="http://gmpg.org/xfn/11"><link rel="pingback" href="https://demo.deliciousthemes.com/stag/xmlrpc.php"><title>Homepage  &#8211; Fullscreen Intro &#8211; Stag</title><link rel='dns-prefetch' href='//stag-cdn3.deliciousthemes.com' /><link rel='dns-prefetch' href='//fonts.googleapis.com' /><link rel='dns-prefetch' href='//s.w.org' /><link rel="alternate" type="application/rss+xml" title="Stag &raquo; Feed" href="https://demo.deliciousthemes.com/stag/feed/" /><link rel="alternate" type="application/rss+xml" title="Stag &raquo; Comments Feed" href="https://demo.deliciousthemes.com/stag/comments/feed/" /><style type="text/css">img.wp-smiley,img.emoji{display:inline !important;border:none !important;box-shadow:none !important;height:1em !important;width:1em !important;margin:0
+		.07em !im!important}</style><!--[if lte IE 10]><link rel='stylesheet' id='dt-ie-hacks-css'  href='https://stag-cdn3.deliciousthemes.com/stag/wp-content/plugins/delicious-addons/extend-vc/core/assets/css/ie.css' type='text/css' media='all' /> <![endif]--><style id='rs-plugin-settings-inline-css' type='text/css'>#rs-demo-id{}</style><link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://stag-cdn3.deliciousthemes.com/stag/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=3.1.2' type='text/css' media='only screen and (max-width: 768px)' /><style id='stag-style-inline-css' type='text/css'>html .page-newsletter .mc4wp-form .form-wrapper{justify-content:center}html .page-newsletter .mc4wp-form .form-wrapper input[type="submit"]{height:40px}@media only screen and (max-width: 1023px){.page-id-2983 .site-header.initial-state.is-triggered,
+			portant;vertical-align:-0.1em !important;background:none !important;padding:0
+			.page-id-2490 .site-header.initial-state.is-triggered{background:rgba(255, 255, 255, 0.9) !important}}html body .woocommerce-pagination{margin-bottom:80px}.menu-fixer{display:none}html
+			body{background:#fafafa}#wrapper{background:#fff}#header{padding-top:48px;padding-bottom:48px}</style> <script type='text/javascript'>/*  */
+			var wc_add_to_cart_params = {"ajax_url":"\/stag\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/stag\/homepage-fullscreen-intro\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/demo.deliciousthemes.com\/stag\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+			/*  */</script> <script type='text/javascript'>/*  */
+			var stag_loader = {"stag_bcolor":"#3e8a6c"};
+			/*  */</script> <link rel='https://api.w.org/' href='https://demo.deliciousthemes.com/stag/wp-json/' /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://demo.deliciousthemes.com/stag/xmlrpc.php?rsd" /><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://demo.deliciousthemes.com/stag/wp-includes/wlwmanifest.xml" /><meta name="generator" content="WordPress 4.8.2" /><meta name="generator" content="WooCommerce 3.1.2" /><link rel="canonical" href="https://demo.deliciousthemes.com/stag/homepage-fullscreen-intro/" /><link rel='shortlink' href='https://demo.deliciousthemes.com/stag/?p=3179' /><link rel="alternate" type="application/json+oembed" href="https://demo.deliciousthemes.com/stag/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.deliciousthemes.com%2Fstag%2Fhomepage-fullscreen-intro%2F" /><link rel="alternate" type="text/xml+oembed" href="https://demo.deliciousthemes.com/stag/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.deliciousthemes.com%2Fstag%2Fhomepage-fullscreen-intro%2F&#038;format=xml" /> <script></script> <noscript><style>.woocommerce-product-gallery{opacity:1 !important}</style></noscript><meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/> <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://demo.deliciousthemes.com/stag/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="https://demo.deliciousthemes.com/stag/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.2.3.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." /><link rel="icon" href="https://demo.deliciousthemes.com/stag/wp-content/uploads/2015/11/cropped-favicon1-150x150.png" sizes="32x32" /><link rel="icon" href="https://demo.deliciousthemes.com/stag/wp-content/uploads/2015/11/cropped-favicon1-300x300.png" sizes="192x192" /><link rel="apple-touch-icon-precomposed" href="https://demo.deliciousthemes.com/stag/wp-content/uploads/2015/11/cropped-favicon1-300x300.png" /><meta name="msapplication-TileImage" content="https://demo.deliciousthemes.com/stag/wp-content/uploads/2015/11/cropped-favicon1-300x300.png" /><style type="text/css" title="dynamic-css" class="options-output">html
+			body{font-family:Raleway;line-height:24px;font-weight:400;font-style:normal;color:#656565;font-size:15px}html .main-navigation li
+			a{font-family:Raleway;line-height:24px;font-weight:400;font-style:normal;color:#323232;font-size:12px}html .main-navigation ul ul
+			a{font-family:Raleway;line-height:18px;font-weight:400;font-style:normal;font-size:13px}html
+			h1{font-family:Raleway;line-height:52px;font-weight:500;font-style:normal;color:#323232;font-size:42px}html
+			h2{font-family:Raleway;line-height:42px;font-weight:500;font-style:normal;color:#323232;font-size:30px}html
+			h3{font-family:Raleway;line-height:32px;font-weight:500;font-style:normal;color:#323232;font-size:24px}html
+			h4{font-family:Raleway;line-height:28px;font-weight:500;font-style:normal;color:#323232;font-size:18px}html
+			h5{font-family:Raleway;line-height:24px;font-weight:500;font-style:normal;color:#323232;font-size:15px}html
+			h6{font-family:Raleway;line-height:20px;font-weight:500;font-style:normal;color:#323232;font-size:14px}html
+			body{background-color:#fafafa}html body
+			#page{background-color:#fff}html .site-footer{background-color:#cccccc}-moz::selection,::selection{background:#3e8a6c}</style><style type="text/css" data-type="vc_custom-css">.fullscreen-intro-projects
+
+
+			#filter_options{display:none}@media only screen and (max-width: 1023px){.site-header.initial-state.is-triggered{background:rgba(0, 0, 0, 0.8) !important}}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1456935826990{padding-top:120px !important;padding-bottom:60px !important}.vc_custom_1456935638637{padding-top:0px !important;padding-bottom:0px !important}.vc_custom_1456934249526{padding-top:90px !important;padding-bottom:120px !important}.vc_custom_1456934727418{padding-top:100px !important}.vc_custom_1456936401381{padding-top:40px !important;padding-bottom:0px !important}.vc_custom_1456935713032{padding-top:0px !important;padding-bottom:0px !important}.vc_custom_1457021127541{padding-top:100px !important;padding-right:40px !important;padding-bottom:80px !important;padding-left:40px !important;background-color:#fafafa !important}.vc_custom_1457021140925{padding-top:100px !important;padding-right:40px !important;padding-bottom:80px !important;padding-left:40px !important;background-color:#53ffcb !important}</style><noscript><style type="text/css">.wpb_animate_when_almost_visible{opacity:1}</style></noscript>
+		</head>
+		<body id="tupeludo">
+		
+			<div class="container">
+				<nav class="navbar navbar-default navbar-fixed-top">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html"><img class="img-responsive" src="img/LOGO-MORAJ.png" alt=""></a>
+						</div>
+
+						<a class="telefono" href="tel:+573128436146"></a>
+						<a target="blank" class="facebook" href="https://www.behance.net/moraj7"></a>
+						<a target="blank" class="instagram" href="https://www.instagram.com/artmoraj"></a>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#myCarousel" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.collapse.in">Skills</a></li>
+								<li><a href="#proceso" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.collapse.in">Process</a></li>
+								<li><a href="#portafolio" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.collapse.in">Portfolio</a></li>
+								<li><a href="#contacto" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.collapse.in">Contact</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		
+
+			<div class="container head-content">
+						<div class="title-center">
+						<div class="dt-title-wrapper">
+							<h2 class="section-title">SKILLS</h2>
+						</div>
+					</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="vc_row wpb_row vc_row-fluid vc_custom_1456935826990 lighter-overlay">
+							<div class="wpb_column vc_column_container vc_col-sm-12" >
+								<div class="vc_column-inner ">
+									<div class="wpb_wrapper">
+										<div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-15">
+											<div class="wpb_column vc_column_container vc_col-sm-4" >
+												<div class="vc_column-inner ">
+													<div class="wpb_wrapper">
+														<div class="dt-service-elem content-left square no-fill wow fadeInUp" >
+															<div class="dt-service-icon">
+																<span class="icon-beaker">
+																</span>
+															</div>
+															<div class="dt-service-content">
+																<h4 class="dt-service-title ">USER EXPERIENCE</h4>
+																<p> Great Experiences are the most powerfull strategies to improve your business and create endurance relationships with customers.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="wpb_column vc_column_container vc_col-sm-4" >
+												<div class="vc_column-inner ">
+													<div class="wpb_wrapper">
+														<div class="dt-service-elem content-left square no-fill wow fadeInUp" >
+															<div class="dt-service-icon">
+																<span class="icon-camera">
+																</span>
+															</div>
+															<div class="dt-service-content">
+																<h4 class="dt-service-title ">UI DESIGN</h4>
+																<p>Lights Interfaces with fresh style. I love made clean interface that can be intuitive for users and brings a lot of emotions while ther are using our development.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="wpb_column vc_column_container vc_col-sm-4" >
+												<div class="vc_column-inner ">
+													<div class="wpb_wrapper">
+														<div class="dt-service-elem content-left square no-fill wow fadeInUp" >
+															<div class="dt-service-icon">
+																<span class="icon-linegraph"></span>
+															</div>
+															<div class="dt-service-content">
+																<h4 class="dt-service-title ">VIDEO &amp;  MOTION</h4><p>Animation, This field of Design is one of my favorites things to do. Create aweseome videos using motion graphic can be an awesome tool into social media</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="vc_row wpb_row vc_inner vc_row-fluid">
+											<div class="wpb_column vc_column_container vc_col-sm-4" ><div class="vc_column-inner ">
+												<div class="wpb_wrapper"></div>
+											</div>
+										</div>
+										<div class="wpb_column vc_column_container vc_col-sm-4" >
+											<div class="vc_column-inner ">
+												<div class="wpb_wrapper">
+													<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_20 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey">
+														<span class="vc_sep_holder vc_sep_holder_l">
+															<span  class="vc_sep_line"></span>
+														</span>
+														<span class="vc_sep_holder vc_sep_holder_r">
+															<span  class="vc_sep_line">
+															</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="wpb_column vc_column_container vc_col-sm-4" >
+											<div class="vc_column-inner ">
+												<div class="wpb_wrapper">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-15">
+										<div class="wpb_column vc_column_container vc_col-sm-4" >
+											<div class="vc_column-inner ">
+												<div class="wpb_wrapper">
+													<div class="dt-service-elem content-left square no-fill wow fadeInUp" ><div class="dt-service-icon">
+														<span class="icon-tools-2">
+														</span>
+													</div>
+													<div class="dt-service-content">
+														<h4 class="dt-service-title ">APP DEVELOPMENT</h4>
+														<p> As Ceo as an Start Up called " Tu Peludo App " Mobile Apss is a big world that can bring us accesibility and comodity as humans have never lived</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="wpb_column vc_column_container vc_col-sm-4" >
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="dt-service-elem content-left square no-fill wow fadeInUp" >
+													<div class="dt-service-icon">
+														<span class="icon-clock">
+														</span>
+													</div>
+													<div class="dt-service-content">
+														<h4 class="dt-service-title ">TIME MANAGEMENT</h4>
+														<p>Awesome projects require a lot of hard work and iterations to achieve the best solution to solve an idea. I use tools like "Trello" to manage activities and time </p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="wpb_column vc_column_container vc_col-sm-4" >
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="dt-service-elem content-left square no-fill wow fadeInUp" >
+													<div class="dt-service-icon">
+														<span class="icon-lightbulb">
+														</span>
+													</div>
+													<div class="dt-service-content">
+														<h4 class="dt-service-title ">BRAINSTORMING</h4>
+														<p>It is time to be creative. In this world you need explore and have strong to believe in yout ideas. We all the time have good a ideas that is for Brainstorming and Requirements are two basic task to solve design ideas</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>			
+		</div>			
+
+	</div>			
+	
+
+	<div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-parallax="1.5" style="background-color: rgba(0, 0, 0, 0.65098); position: relative; left: 15px; box-sizing: border-box; width: 2064px; padding-left: 0px; padding-right: 0px;" data-vc-parallax-image="https://demo.deliciousthemes.com/stag/wp-content/uploads/2015/11/quote-background1.jpg" class="vc_row wpb_row vc_row-fluid vc_custom_1456934249526 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving darker-overlay">
+		<div class="wpb_column vc_column_container vc_col-sm-12 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+			<div class="vc_column-inner ">
+				<div class="wpb_wrapper">
+					<div class="quote-size-medium align-center">
+						<span class="quote-author">Moraj</span>
+						<h2 class="parallax-quote">"Luxury and Fresh Design "</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="vc_parallax-inner skrollable skrollable-between" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;" style="height: 150%; background-image: url(https://demo.deliciousthemes.com/stag/wp-content/uploads/2015/11/quote-background1.jpg); top: -27.356130108423688%;">
+			</div>
+	</div>	
+
+
+<div class="vc_row-full-width">
+</div>
+<div class="vc_row wpb_row vc_row-fluid lighter-overlay">
+	<div class="wpb_column vc_column_container vc_col-sm-1" >
+		<div class="vc_column-inner ">
+			<div class="wpb_wrapper">
+			</div>
+		</div>
+	</div>
+	<div class="wpb_column vc_column_container vc_col-sm-10" >
+		<div class="vc_column-inner ">
+			<div class="wpb_wrapper">
+				<div class="vc_empty_space"  style="height: 100px" >
+					<span class="vc_empty_space_inner"></span>
+				</div>
+				<div class="title-center">
+					<div class="dt-title-wrapper">
+						<h2 class="section-title">DESIGN PROCESS</h2>
+					</div>
+				</div>
+				<div class="vc_empty_space"  style="height: 60px" >
+					<span class="vc_empty_space_inner"></span>
+				</div>
+				<div class="dt-process-tabs ">
+					<ul class="dt-tabs">
+						<li class="dt-tab-link current" data-tab="tab-159">
+							<span class="dt-tab-count">01</span>
+							<span class="dt-tab-title">Requeriments</span>
+						</li>
+						<li class="dt-tab-link " data-tab="tab-687">
+							<span class="dt-tab-count">02</span>
+							<span class="dt-tab-title">Brainstorming</span>
+						</li>
+						<li class="dt-tab-link " data-tab="tab-795">
+							<span class="dt-tab-count">03</span>
+							<span class="dt-tab-title">User Experience
+							</span>
+						</li>
+						<li class="dt-tab-link " data-tab="tab-381">
+							<span class="dt-tab-count">04</span>
+							<span class="dt-tab-title">Design</span>
+						</li>
+						<li class="dt-tab-link " data-tab="tab-825"><span class="dt-tab-count">05</span>
+							<span class="dt-tab-title">Development</span>
+						</li>
+							<li class="dt-tab-link " data-tab="tab-381">
+							<span class="dt-tab-count">06</span>
+							<span class="dt-tab-title">User Tests</span>
+						</li>
+					</ul>
+					<div id="tab-159" class="dt-tab-content current">
+						<h2>The Main of Ideas</h2>
+						This proccess stablished all necesities and tools to use trying to resolve all user needs</p>
+						<ul class="dt-process-keys">
+							<li>objectives</li>
+							<li>understanding</li>
+							<li>research</li>
+						</ul> <span class="dt-tab-content-no animated fadeInUp">01</span>
+					</div>
+					<div id="tab-687" class="dt-tab-content ">
+					<h2>Plan to Action</h2>All creative process need a point to start and to end. Trace a route to follow can be a guide</p>
+
+					<ul class="dt-process-keys">
+						<li>Plan</li>
+						<li>Co-Workers</li>
+						<li>Time</li>
+					</ul> 
+					<span class="dt-tab-content-no animated fadeInUp">02</span>
+				</div>
+				<div id="tab-795" class="dt-tab-content ">
+					<h2>Design Thinking</h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+					<ul class="dt-process-keys">
+						<ul class="dt-process-keys">
+						<li>wireframing</li>
+						<li>mockups</li>
+						<li>sketches</li>
+
+					<span class="dt-tab-content-no animated fadeInUp">03</span>
+				</div>
+				<div id="tab-381" class="dt-tab-content ">
+					<h2>The Art of Code</h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+					<ul class="dt-process-keys">
+						<li>HTML / CSS</li>
+						<li>JAVA</li>
+						<li>MySQL</li>
+					</ul> 
+					<span class="dt-tab-content-no animated fadeInUp">06</span>
+				</div>
+				<div id="tab-825" class="dt-tab-content ">
+					<h2>The Science of Launch</h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+					<ul class="dt-process-keys">
+						<li>analytics</li>
+						<li>split testing</li>
+						<li>performance audit</li>
+					</ul> 
+					<span class="dt-tab-content-no animated fadeInUp">05</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wpb_column vc_column_container vc_col-sm-1" >
+	<div class="vc_column-inner ">
+		<div class="wpb_wrapper">
+		</div>
+	</div>
+</div>
+</div>
+
+				<div class="vc_row-full-width"></div>
+				<div id="contact" class="vc_row wpb_row vc_row-fluid vc_custom_1456934727418 lighter-overlay">
+					<div class="wpb_column vc_column_container vc_col-sm-12" >
+						<div class="vc_column-inner ">
+							<div class="wpb_wrapper">
+								<div class="title-center">
+									<div class="dt-title-wrapper">
+										<h2 class="section-title">CONTACT ME</h2>
+										<h4 class="section-tagline">If you`re curious about what we do or just want to get in touch with us, don`t hesitate to do it.</p>
+											<p>Looking forward to work together!</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="vc_row wpb_row vc_row-fluid no-paddings-row vc_custom_1456936401381 vc_row-o-equal-height vc_row-o-content-top vc_row-flex lighter-overlay">
+							<div class="wpb_column vc_column_container vc_col-sm-6 wow fadeInUp vc_col-has-fill" >
+								<div class="vc_column-inner vc_custom_1457021127541"><div class="wpb_wrapper">
+									<div class="wpb_text_column wpb_content_element ">
+										<div class="wpb_wrapper">
+											<h4 style="text-align: center;">GET IN TOUCH</h4></div>
+										</div>
+										<div class="vc_empty_space"  style="height: 32px" >
+											<span class="vc_empty_space_inner">
+											</span>
+										</div>
+										<div role="form" class="wpcf7" id="wpcf7-f1959-p3179-o1" lang="en-US" dir="ltr">
+											<div class="screen-reader-response"></div>
+											<form action="/stag/homepage-fullscreen-intro/#wpcf7-f1959-p3179-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+												<div style="display: none;"> 
+													<input type="hidden" name="_wpcf7" value="1959" /> 
+													<input type="hidden" name="_wpcf7_version" value="4.9" /> 
+													<input type="hidden" name="_wpcf7_locale" value="en_US" /> 
+													<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1959-p3179-o1" /> 
+													<input type="hidden" name="_wpcf7_container_post" value="3179" />
+												</div>
+												<div class="dt-one-half"> <br /> 
+													<span class="wpcf7-form-control-wrap your-name">
+														<input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" />
+													</span>
+													<br/>
+												</div>
+												<br/>
+												<div class="dt-one-half column-last"> <br/> 
+													<span class="wpcf7-form-control-wrap your-email">
+														<input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" />
+													</span>
+													<br/>
+												</div>
+												<br/> 
+												<span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Subject"/>
+												</span>
+												<br/> 
+												<span class="wpcf7-form-control-wrap your-message">
+													<textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Message">
+													</textarea>
+												</span>
+												<br/>
+												<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit solid" /></p><div class="wpcf7-response-output wpcf7-display-none">
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="wpb_column vc_column_container vc_col-sm-6 wow fadeInUp vc_col-has-fill" >
+							<div class="vc_column-inner vc_custom_1457021140925">
+								<div class="wpb_wrapper">
+									<div class="wpb_text_column wpb_content_element ">
+										<div class="wpb_wrapper"><h4 style="text-align: center;">CONTACT DETAILS</h4>
+										</div>
+									</div>
+									<div class="vc_empty_space"  style="height: 32px" >
+										<span class="vc_empty_space_inner">
+										</span>
+									</div>
+									<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+										<div class="wpb_wrapper">
+											<ul class="contact-info">
+												<li>
+													<span>Behance</span><a href="https://www.behance.net/moraj7">www.behance.net/moraj7</a>
+												</li>
+												<li>
+													<span>Phone</span>(+57) 300 742 29 01</li>
+													<li>
+														<span>Email</span>
+														<a href="morajdesign@gmail.com">morajdesign@gmail.com</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+
+
+						<div class="wpb_column vc_column_container vc_col-sm-12 wow fadeInUp vc_col-has-fill" >
+
+							<div class="footer">
+								<h2>Network</h2>
+								<a class="telefono" href="tel:+573128436146"></a>
+								<a target="blank" class="facebook" href="https://www.facebook.com/strikeads"></a>
+								<a target="blank" class="instagram" href="https://www.instagram.com/artmoraj"></a>
+								<p>Copyright © 2017 by Art Moraj <small>All Rights Reserved.</small></p>
+							</div>
+						</div>
+
+					</script>
+
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+					<script src="js/bootstrap.min.js"></script>
+					<script type="text/javascript">window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+						d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+							_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+							$.src='//v2.zopim.com/?3AJZA5Tyx1WrzOa0NIxpE2cg8a8RyjdS';z.t=+new Date;$.
+							type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');</script><script>$zopim( function() {
+							})</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+								(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+								m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+							})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+							ga('create', 'UA-45051484-4', 'auto');
+							ga('require', 'linkid', 'linkid.js');
+							ga('send', 'pageview');</script> <script type="text/javascript">function revslider_showDoubleJqueryError(sliderID) {
+								var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+								errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+								errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+								errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+								errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+								jQuery(sliderID).show().html(errorMessage);
+							}</script> <script type='text/javascript'>/*  */
+							var instafeed = {"ajaxurl":"https:\/\/demo.deliciousthemes.com\/stag\/wp-admin\/admin-ajax.php","client_cachetime":"600"};
+							/*  */</script> <script type='text/javascript'>/*  */
+							var wpcf7 = {"apiSettings":{"root":"https:\/\/demo.deliciousthemes.com\/stag\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+							/*  */</script> <script type='text/javascript'>/*  */
+							var woocommerce_params = {"ajax_url":"\/stag\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/stag\/homepage-fullscreen-intro\/?wc-ajax=%%endpoint%%"};
+							/*  */</script> <script type='text/javascript'>/*  */
+							var wc_cart_fragments_params = {"ajax_url":"\/stag\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/stag\/homepage-fullscreen-intro\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments_d96f740ef5df1e2421b1c4928bba5ecd"};
+							/*  */</script> <script type='text/javascript'>/*  */
+							var stag_styles = {"stag_header_bg":"#ffffff","stag_header_scroll_bg":"rgba(255,255,255,0.9)","stag_default_color":"#ffffff","stag_logo_width":"85","stag_logo_height":"25","stag_logo_onscroll_height":"25","stag_init_pt":"48","stag_init_pb":"48","stag_scroll_pt":"16","stag_scroll_pb":"16","stag_scrolling_effect":"1","stag_mainlogosrc":"","stag_alternativelogosrc":"","stag_alternativelogo":"0","stag_scheme":"light-header","stag_scheme_on_scroll":"light-header","stag_pagenav_behavior_switch":"1","stag_initial_navigation_style":"dark-header","stag_onscroll_navigation_style":"light-header","stag_initial_header_color":"255,255,255","stag_onscroll_header_color":"255,255,255","stag_initial_header_color_opacity":"0","stag_onscroll_header_color_opacity":"90","stag_initial_logo_image_url":"https:\/\/demo.deliciousthemes.com\/stag\/wp-content\/uploads\/2015\/12\/logo-alt.png","stag_initial_logo_image_width":"85","stag_initial_logo_image_height":"25","stag_onscroll_logo_image_url":"https:\/\/demo.deliciousthemes.com\/stag\/wp-content\/uploads\/2015\/12\/logo.png","stag_onscroll_logo_image_width":"85","stag_onscroll_logo_image_height":"25","page_id":"3179"};
+							/*  */</script> <script type='text/javascript'>/*  */
+							var stag_custom = {"stag_id":"3179","stag_header_top":"0"};
+							/*  */</script> <script type='text/javascript'>/*  */
+							var dt_grid_FDHXJ = {"id":"ebe","initial_word":"","distyle":"all","dt_load_more":"Load More +","dt_infinite_loader":"Loading...","dt_no_projects_left":"No more projects to show","cat_trigger":""};
+							/*  */</script> 
+							<script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/fe3dc6d78ba112cbe166ab906b0e5b92.js" data-minify="1"></script>
+							<script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/8d860e7ccb86289746f18b46d4ba1f52.js" data-minify="1"></script>
+							<script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/554d2a0db49f7829f0b988a63443a4de.js" data-minify="1"></script>
+							<script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/0578385579c2bad6400efc0210d81531.js" data-minify="1"></script>
+							<script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/ea65d4d75ca8cd8d75c54177c21614b3.js" data-minify="1"></script>
+							<script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/43b97d040bde511e7b422a94bf15ad98.js" data-minify="1"></script>
+							<script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/c58bf17bb7d51fd0686a44b44ea9cb9c.js" data-minify="1"></script>
+							<script src="https://stag-cdn2.deliciousthemes.com/stag/wp-content/cache/min/1/6bf82f02ad4eabfa794239c542f74e7d.js" data-minify="1"></script> 
+						</body>
+						</html>

@@ -1,0 +1,1091 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Days+One');
+
+body{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+body#inicio{
+	background: url("../img/principal.jpg") no-repeat center center fixed;
+	background-color: #45e5be;
+}
+
+body#inicio .logo-index{
+	padding: 0;
+	text-align:center;
+}
+
+body#inicio .logo-index>img{
+	display: inline-block;
+	margin: 110px 0 0 0;
+}
+
+body#inicio .logo-index>p{
+	color: #fdc689;
+	font-weight:bold;
+	font-size:1.8em;
+	height: 65px;
+}
+
+body#inicio>div.container{
+	text-align: center;
+	margin-top: 3%;
+}
+
+body#inicio>div.container h1{
+	color: #ffffff;
+	font-weight:bold;
+}
+
+body#inicio>div.container input:first-child{
+	width:30%;
+	margin-top:10px;
+	border:none;
+	border-right: solid;
+	margin-right:0px;
+	height: 50px;
+	padding: 0 0px 0px 10px;
+	border-radius:5px 0 0 5px;
+}
+
+body#inicio>div.container select{
+	width:30%;
+	margin-top:10px;
+	border:none;
+	margin-right:0px;
+	height: 50px;
+	padding: 0 0px 0px 10px;
+	margin-left: -4px;
+}
+
+body#inicio>div.container input:last-child{
+	width:30%;
+	margin-top:10px;
+	border:none;
+	border-radius:0 5px 5px 0;
+	margin-left: -4px;
+	background: #fdc689;
+	color:white;
+	height:50px;
+	font-weight:bold;
+	transition: 0.5s ease;
+}
+
+body#inicio>div.container input:last-child:hover{
+	background: #fdc689;
+}
+
+/* NAV BAR */
+
+#tupeludo .facebook,
+#tupeludo .instagram,
+#tupeludo .telefono{
+	height: 36px;
+	width: 36px;
+	display: inline-block;
+	float: left;
+    -webkit-transition:background-position .1s ease-in;  
+    -moz-transition:background-position .1s ease-in;  
+    -o-transition:background-position .1s ease-in;  
+    transition:background-position .1s ease-in; 
+}
+
+#tupeludo .facebook{
+	margin: 7px 7px;
+	background: url("../img/facebook.png") no-repeat;
+	background-size: cover;
+	background-position:center top;
+}
+
+#tupeludo .instagram{
+	margin: 7px 7px;
+	background: url("../img/instagram.png") no-repeat;
+	background-size: cover;
+	background-position:center top;
+}
+
+#tupeludo .telefono{
+	margin: 7px 7px 7px 20px;
+	background: url("../img/phone.png") no-repeat;
+	background-size: cover;
+	background-position:center top;
+}
+
+#tupeludo .facebook:hover,
+#tupeludo .instagram:hover,
+#tupeludo .telefono:hover{
+	background-position: center 100%;
+}
+
+#tupeludo .navbar-default .navbar-toggle {
+    border-color: white;
+}
+
+#tupeludo .navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+#tupeludo .navbar-brand{
+	background-color: #21231f;
+	width: 150px;
+	padding: 12px;
+}
+
+#tupeludo .container-fluid{
+	opacity: 1.0;
+}
+
+#tupeludo .navbar-fixed-top{
+	background: #21231f url("../img/Textura_Navegacion.png") top center repeat-x;
+	background-size: 320px 50px;
+	-moz-background-size: 320px 50px;
+	-o-background-size: 320px 50px;
+	-webkit-background-size: 320px 50px;
+	-khtml-background-size: 320px 50px;
+	border: none;
+}
+
+#tupeludo .navbar-default .navbar-nav>li>a {
+	background-color: #21231f;
+	color: white;
+	transition: 0.5s ease;
+}
+
+#tupeludo .navbar-default .navbar-nav>li>a:hover{
+	background-color:#fdc689;
+}
+
+#tupeludo .navbar-default .navbar-nav>.active>a, 
+#tupeludo .navbar-default .navbar-nav>.active>a:focus{
+	background-color: #fdc689;
+}
+ 
+#tupeludo .navbar-default .navbar-nav>.active>a:hover{
+	background-color:#fdc689;
+}
+
+/* FIN NAV BAR  */
+
+/* HEAD-CONTENT */
+
+#tupeludo #flotante-contacto{
+	position: fixed;
+	z-index: 1000;
+	background-color: white;
+	bottom: 0px;
+	left: 40px;
+	width: 400px;
+	height: 60px;
+	text-align: center;
+	border-radius: 20px 20px 0 0;
+	-webkit-box-shadow: 0 0 10px 1px rgba(51, 51, 51, 0.4);
+	box-shadow: 0 0 10px 1px rgba(51, 51, 51, 0.4);
+}
+
+#tupeludo #flotante-contacto img{
+	border-radius: 20px 20px 0 0;
+	height: auto;
+}
+
+#tupeludo #flotante-contacto a{
+	text-align: center;
+	display: inline-block;
+	padding: 0px 65px;
+}
+
+#tupeludo #flotante-contacto p{
+	margin-bottom: 0;
+	text-align: center;
+	display: inline-block;
+}
+
+#tupeludo .head-content .titulo{
+	text-align:center;
+	color: #fdc689;
+	font-size:2.3em;
+	font-family: 'Days One', sans-serif;
+}
+
+#tupeludo .head-content p{
+	text-align:justify;
+}
+
+/* FIN HEAD-CONTENT */
+
+/* CAROUSEL */
+
+#tupeludo .carousel{
+	margin-top:50px;
+}
+
+/* FIN CAROUSEL */
+
+/* CONTENT */
+
+#tupeludo .content{
+	text-align:center;
+	margin-top: 50px;
+}
+
+#tupeludo #myCarousel-packs{
+	display:none;
+}
+
+#tupeludo #myCarousel-packs .carousel-control{
+	width:8%;
+}
+
+#tupeludo .content.paquetes .row{
+	margin-right: 0;
+    margin-left: 0;
+}
+
+#tupeludo .content h1{
+	color: #01cf67;
+	font-weight:bold;
+}
+
+#tupeludo .content img.img-pack{
+	width: 30%;
+}
+
+#tupeludo #myCarousel-packs.content img.img-pack{
+	width: 100%;
+	margin-top: 40px;
+}
+
+#tupeludo .content.paquetes .pack{
+	padding:0px;
+}
+
+#tupeludo .content.paquetes .pack .header{
+	color: white;
+	font-size: 1.8em;
+	border-bottom: solid;
+	font-family: 'Days One', sans-serif;
+}
+
+#tupeludo .content.paquetes .pack .precio,
+#tupeludo .content.paquetes .pack .precioOld{
+	font-weight:bold;
+	font-size: 1.3em;
+	font-family: 'Days One', sans-serif;
+}
+
+#tupeludo .content.paquetes .pack .precio{
+	color: white;
+	margin: 0px;
+}
+
+#tupeludo .content.paquetes .pack .precioOld{
+	text-decoration: line-through;
+	color: #a57e7e;
+}
+
+#tupeludo .content.paquetes .pack #set-descuento2,
+#tupeludo .content.paquetes .pack #set-descuento3,
+#tupeludo .content.paquetes .pack #set-descuento22,
+#tupeludo .content.paquetes .pack #set-descuento32{
+	font-size: 2.2em;
+	color: #f84a67;
+	font-weight: bold;
+	position: absolute;
+	top: 60px;
+	left: 5px;
+	background: url(../img/tag.png) no-repeat center center;
+	background-size: cover;
+	width: 100px;
+	height: 80px;
+	line-height: 72px;
+}
+
+#tupeludo #myCarousel-packs.content.paquetes .pack #set-descuento2,
+#tupeludo #myCarousel-packs.content.paquetes .pack #set-descuento3{
+	font-size: 1.3em;
+	top: 48px;
+	left: 45px;
+	width: 60px;
+	height: 50px;
+	line-height: 45px;
+}
+
+#tupeludo .content.paquetes .pack .precio2{
+	font-size: 2em;
+	color: white;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	font-family: 'Days One', sans-serif;
+}
+
+#tupeludo .content.paquetes .pack .precio>small,
+#tupeludo .content.paquetes .pack .precio2>small,
+#tupeludo .content.paquetes .pack .precioOld>small{
+	color: white;
+}
+
+#tupeludo .content.paquetes .pack.pack_1{
+	background: #5692e8 url("../img/Huellas_Textura_Paquetes.png") top center repeat-y;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+}
+
+#tupeludo .content.paquetes .pack.pack_2{
+	background: #e33d73 url("../img/Huellas_Textura_Paquetes.png") top center repeat-y;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+}
+
+#tupeludo .content.paquetes .pack.pack_3{
+	background: #fdc689 url("../img/Huellas_Textura_Paquetes.png") top center repeat-y;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+}
+
+#tupeludo .content.paquetes .pack.pack_1 .header{
+	background-color: #5692e8;
+}
+
+#tupeludo .content.paquetes .pack.pack_2 .header{
+	background-color: #e33d73;
+}
+
+#tupeludo .content.paquetes .pack.pack_3 .header{
+	background-color: #fdc689;
+}
+
+#tupeludo .content.paquetes .pack .descripcion-pack{
+	background-color: rgba(255,255,255,0.5);
+	margin: 0px 0;
+	padding: 5px 0;
+}
+
+#tupeludo #myCarousel-packs.content.paquetes .pack .descripcion-pack{
+	margin: 15px 0 0px 0;
+}
+
+#tupeludo .content.paquetes .pack .paseo-canino{
+	color:white;
+	font-weight:bold;
+	font-size: 1.5em;
+	margin-top:10px;
+}
+
+#tupeludo #myCarousel-packs.content.paquetes .pack .paseo-canino{
+	margin: 0px;
+}
+
+#tupeludo .content.paquetes .pack .fondo-blanco{
+	background-color:rgb(255, 255, 255);
+	margin: 0 0 10px 0;
+	padding-top:9px;
+	font-size:1.2em;
+	font-weight: bold;
+}
+
+#tupeludo .content.paquetes .pack.pack_1 .fondo-blanco{
+	color: #5692e8;
+}
+
+#tupeludo .content.paquetes .pack.pack_2 .fondo-blanco{
+	color: #e33d73;
+}
+
+#tupeludo .content.paquetes .pack.pack_3 .fondo-blanco{
+	color: #fdc689;
+}
+
+#tupeludo .content.paquetes .pack .tamano_perro{
+	margin-bottom:20px;
+}
+
+#tupeludo .content.paquetes .pack .salidas_diarias{
+	margin-bottom:20px;
+}
+
+#tupeludo .content.paquetes .pack .salidas_diarias>p,
+#tupeludo .content.paquetes .pack .tamano_perro>p{
+	color: white;
+	font-weight:bold;
+	margin: 0;
+}
+
+#tupeludo .content.paquetes .pack .img-perro{
+	width:50%;
+	display: inline;
+}
+
+#tupeludo .content.paquetes .pack.pack_1 .toggle-group span{
+	background-color: #45e5be;
+}
+
+#tupeludo .content.paquetes .pack.pack_2 .toggle-group span{
+	background-color: #45e5be;
+}
+
+#tupeludo .content.paquetes .pack.pack_3 .toggle-group span{
+	background-color: #45e5be;
+}
+
+#tupeludo .content.paquetes .pack .btn-pequeno,
+#tupeludo .content.paquetes .pack .btn-grande{
+	transition: 0.5 ease;
+}
+
+#tupeludo .content.paquetes .pack .toggle-group>label{
+	background-color: white !important;
+}
+
+#tupeludo .content.paquetes .pack .toggle-group>label.btn-pequeno{
+	border-radius: 15px 0 0 15px;
+	background-size: 90% !important;
+}
+
+#tupeludo .content.paquetes .pack .toggle-group>label.btn-grande{
+	border-radius: 0 15px 15px 0;
+	background-size: 90% !important;
+}
+
+#tupeludo .content.paquetes .pack .toggle-group>label.btn-x1{
+	border-radius: 15px 0 0 15px;
+	background-size: 90% !important;
+}
+
+#tupeludo .content.paquetes .pack .toggle-group>label.btn-x2{
+	border-radius: 0 15px 15px 0;
+	background-size: 90% !important;
+}
+
+#tupeludo .toggle.btn{
+	border-radius: 0;
+}
+
+#tupeludo .toggle.btn.btn-grande{
+	border-radius: 0 15px 15px 0;
+}
+
+#tupeludo .btn.active, 
+#tupeludo .btn:active{
+	box-shadow:none;
+}
+
+#tupeludo .content.paquetes .pack.pack_1 .toggle-group .btn-pequeno{
+	background: url("../img/pequeno_violeta.png") no-repeat 10% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_1 .toggle-group .btn-grande{
+	background: url("../img/grande_violeta.png") no-repeat 90% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_1 .toggle-group .btn-x1{
+	background: url("../img/violeta_una.png") no-repeat 10% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_1 .toggle-group .btn-x2{
+	background: url("../img/violeta_dos.png") no-repeat 90% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_2 .toggle-group .btn-pequeno{
+	background: url("../img/pequeno_verde.png") no-repeat 10% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_2 .toggle-group .btn-grande{
+	background: url("../img/grande_verde.png") no-repeat 90% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_2 .toggle-group .btn-x1{
+	background: url("../img/verde_una.png") no-repeat 10% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_2 .toggle-group .btn-x2{
+	background: url("../img/verde_dos.png") no-repeat 90% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_3 .toggle-group .btn-pequeno{
+	background: url("../img/pequeno_naranja.png") no-repeat 10% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_3 .toggle-group .btn-grande{
+	background: url("../img/grande_naranja.png") no-repeat 90% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_3 .toggle-group .btn-x1{
+	background: url("../img/naranja_una.png") no-repeat 10% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_3 .toggle-group .btn-x2{
+	background: url("../img/naranja_dos.png") no-repeat 90% center;
+}
+
+#tupeludo .content.paquetes .pack.pack_1 .descripcion-pack,
+#tupeludo .content.paquetes .pack.pack_2 .descripcion-pack{
+	padding: 15px 0;
+}
+
+#tupeludo .content.paquetes .pack .descripcion-pack .obsequio{
+	color:white;
+	font-weight:bold;
+}
+
+#tupeludo .content .adquiere-btn{
+	font-size:1.2em;
+	margin-bottom: 15px;
+	background-color: white;
+	font-weight:bold;
+	padding: 10px 15px;
+	border-radius: 10px;
+	text-decoration: none;
+	transition: background-color 0.5s ease;
+	border: none;
+}
+
+#tupeludo .content .pack.pack_1 .adquiere-btn{
+	color: #5993e6;
+}
+
+#tupeludo .content .pack.pack_2 .adquiere-btn{
+	color: #e33d73;
+}
+
+#tupeludo .content .pack.pack_3 .adquiere-btn{
+	color: #fdc689;
+}
+
+#tupeludo .content .pack.pack_1 .adquiere-btn:hover{
+	background-color: #45e5be;
+}
+
+#tupeludo .content .pack.pack_2 .adquiere-btn:hover{
+	background-color: #45e5be;
+}
+
+#tupeludo .content .pack.pack_3 .adquiere-btn:hover{
+	background-color: #45e5be;
+}
+
+#tupeludo .sa-error-container{
+	background:none;
+	padding-top:0;
+}
+
+#tupeludo .sa-input-error{
+	top:23px;
+}
+
+/* FIN CONTENT */
+
+/* QUIERO SER PASEADOR */
+
+#tupeludo .fondo-paseador{
+	background: url("../img/fondo_paseadores.jpg") no-repeat center center fixed;
+	background-size:cover;
+}
+
+#tupeludo .head-content#quiero-ser-paseador{
+	padding: 150px 0;
+}
+
+#tupeludo .head-content#quiero-ser-paseador .titulo{
+	color: #fcc588;
+	text-shadow: 2px 2px 3px #111;
+}
+
+#tupeludo .head-content#quiero-ser-paseador,
+#tupeludo .head-content#quiero-ser-paseador p{
+	text-align: center !important;
+}
+
+#tupeludo .head-content#quiero-ser-paseador p{
+	font-size: 1.2em;
+	margin: 10px 0 40px 0;
+	color: white;
+}
+
+#tupeludo .head-content#quiero-ser-paseador a{
+	font-family: 'Days One', sans-serif;
+	color:white;
+	padding: 9px 25px 10px 25px;
+	text-decoration: none;
+	background-color: #45e5be;
+	border-radius: 10px;
+	transition: background-color 0.5s ease;
+}
+
+#tupeludo .head-content#quiero-ser-paseador a:hover{
+	background-color: #ffae6c;
+}
+
+/* FIN QUIERO SER PASEADOR */
+
+/* CONTACT-FORM */
+
+#tupeludo .contact-form{
+	font-size: 1.2em;
+	margin-top: 0;
+}
+
+#tupeludo .contact-form label{
+	color: #425169;
+}
+
+#tupeludo .contact-form h1{
+	color: #45e5be;
+	font-weight:bold;
+	text-align:center;
+	font-family: 'Days One', sans-serif;
+}
+
+#tupeludo .contact-form input,
+#tupeludo .contact-form textarea,
+#tupeludo .contact-form button{
+	color: #425169;
+	font-size:1em;
+	width:100%;
+	margin-bottom:20px;
+	border-radius:5px;
+	border: solid 1px #425169;
+	height:35px;
+	padding: 2px 10px 5px 10px
+}
+
+#tupeludo .contact-form input::-webkit-input-placeholder,
+#tupeludo .contact-form select::-webkit-input-placeholder,
+#tupeludo .contact-form textarea::-webkit-input-placeholder{
+	color: #ccc;
+}
+
+#tupeludo .contact-form .submit {
+    text-align: center;
+}
+
+#tupeludo .contact-form .submit-contacto{
+	color: white;
+	font-weight: bold;
+	font-size: 1.3em;
+	border: none;
+	background-color: #e33d73;
+	width: 30%;
+	transition: 0.5s ease;
+}
+
+#tupeludo .contact-form .submit-contacto:hover{
+	background-color: #65e8b7;
+}
+
+#tupeludo .contact-form textarea{
+	height: 60px;
+}
+
+#tupeludo .contact-form div{
+	text-align:justify;
+}
+
+#tupeludo .contact-form .appstore,
+#tupeludo .contact-form .playstore{
+	text-align: center;
+}
+
+#intro {
+    background: url(../img/fondo-formulario.jpg) 50% 0;
+    background-size: cover;
+    min-height: 600px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px 0 0px 0;
+}
+.intro-unit {
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+/* FIN CONTACT-FORM */
+
+/* FOOTER */
+
+.footer {
+	text-align: center;
+	padding: 20px 0;
+	background-color: #2d2d2d;
+	margin-top:5px;
+}
+
+.footer h2{
+	color: white;
+	font-weight:bold;
+	text-align:center;
+	font-family: 'Days One', sans-serif;
+}
+
+.footer p{
+	margin: 0;
+	color:#ffffff;
+}
+
+.footer p small{
+	color: #555;
+}
+
+.footer .esperanos{
+	margin-bottom:20px;
+}
+
+.footer .esperanos .titulo-esperanos>h1{
+	color: #ffae6c;
+	font-family: 'Days One', sans-serif;
+}
+
+#tupeludo .footer .facebook,
+#tupeludo .footer .instagram,
+#tupeludo .footer .telefono{
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	float: none;
+	position: relative;
+}
+
+/* FIN FOOTER */
+
+/******** RESPONSIVE ********/
+
+@media (min-width: 992px) and (max-width: 1200px){
+}
+
+@media (max-width: 991px){
+	#tupeludo .content.paquetes .pack .precio{
+		display: inline-block;
+	}
+
+	#tupeludo .content.paquetes .pack .fondo-blanco{
+		padding-bottom: 1px;
+	}
+
+	#tupeludo #myCarousel-packs{
+		display:inline-block;
+		width: 100%;
+	}
+
+	#tupeludo .content.paquetes{
+		display:none;
+	}
+
+	#tupeludo .fondo-paseador{
+		margin-top: -10px;
+	}
+
+	.footer {
+		padding-bottom: 80px;
+	}
+}
+
+@media (max-width: 768px){
+	body#inicio{
+		background: url("../img/principal.jpg") no-repeat 30% center fixed;
+	}
+	
+	#tupeludo .navbar-fixed-top{
+		background: #45e5be url("../img/Textura_Navegacion.png") top center repeat-x;
+		background-size: 320px 50px;
+		-moz-background-size: 320px 50px;
+		-o-background-size: 320px 50px;
+		-webkit-background-size: 320px 50px;
+		-khtml-background-size: 320px 50px;
+		border: none;
+		width: 100%;
+	}
+
+	#tupeludo .navbar-brand{
+		background: transparent;
+	}
+
+	#tupeludo .navbar-default .navbar-nav>li>a {
+		background-color: transparent;
+		color: white;
+		transition: 0.5s ease;
+	}
+
+	#tupeludo .facebook,
+	#tupeludo .instagram,
+	#tupeludo .telefono{
+		position:absolute;
+		top:0;
+	}
+
+	#tupeludo .facebook{
+		left: 49%;
+	}
+
+	#tupeludo .instagram{
+		left: 40%;
+	}
+
+	#tupeludo .telefono{
+		left: 29%;
+	}
+}
+
+@media (max-width: 480px){
+	#tupeludo .content h1{
+		font-size: 1.4em;
+	}
+
+	.footer h2{
+		font-size: 1.7em;
+	}
+
+	.footer p{
+		font-size: 0.8em;
+	}
+	
+	#tupeludo .head-content .titulo{
+		font-size: 1.4em;
+	}
+
+	#tupeludo #myCarousel-packs.content.paquetes .pack .descripcion-pack {
+		margin: 5px 0 0px 0;
+	}
+
+	#tupeludo .content.paquetes .pack .header {
+		margin: 0 0 4px;
+	}
+
+	#tupeludo .content.paquetes .pack .fondo-blanco{
+		margin: 0 0 5px 0;
+	}
+
+	body#inicio>div.container input:first-child{
+		display:block;
+		margin: 0;
+		width:100%;
+		padding-left: 14px;
+		border-radius: 5px 5px 0 0;
+		border: none;
+		font-size: 15px;
+	}
+	
+	#tupeludo .toggle.btn{
+		margin-top: 5px;
+		width: 90% !important;
+	}
+
+	body#inicio>div.container select{
+		display:block;
+		margin: 0;
+		width:100%;
+		font-size: 15px;
+	}
+
+	body#inicio>div.container input:last-child{
+		display:block;
+		margin: 0;
+		width:100%;
+		border-radius: 0 0 5px 5px;
+	}
+	
+	body#inicio>div.container h1{
+		font-size: 1.1em;
+	}
+
+	body#inicio .logo-index>img{
+		width:60%;
+		margin-top: 60px;
+	}
+
+	body#inicio .logo-index>p{
+		font-size:1em;
+	}
+
+	#tupeludo #flotante-contacto{
+		width: auto;
+		left: 10%;
+		right: 10%;
+		height: 35px;
+	}
+
+	#tupeludo #flotante-contacto a {
+		padding: 0px 55px;
+	}
+
+	#tupeludo .facebook{
+		left: 64%;
+	}
+
+	#tupeludo .instagram{
+		left: 52%;
+	}
+
+	#tupeludo .telefono{
+		left: 36%;
+	}
+
+	#tupeludo .navbar .facebook,
+	#tupeludo .navbar .instagram,
+	#tupeludo .navbar .telefono{
+		width: 24px;
+		height: 24px;
+	}
+	
+	#tupeludo .navbar .facebook{
+		left: 65%;
+		margin: 13px 5px;
+	}
+
+	#tupeludo .navbar .instagram{
+		left: 55%;
+		margin: 13px 5px;
+	}
+
+	#tupeludo .navbar .telefono{
+		left: 41%;
+		margin: 13px 7px 13px 20px;
+	}
+	
+	#tupeludo .content.paquetes .pack .salidas_diarias>p,
+	#tupeludo .content.paquetes .pack .tamano_perro>p{
+		font-size: 0.9em;
+	}
+}
+
+/******** FIN RESPONSIVE ********/
+
+
+/******** POPUP ********/ 
+
+#tupeludo .popup-tupeludo{
+	background: url("../img/popup.jpg") no-repeat center center;
+	background-size:cover;
+}
+
+#tupeludo .popup-tupeludo>h2{
+	color: #ffae6c;
+}
+
+#tupeludo .popup-tupeludo>p{
+	margin-top:-10px;
+	margin-bottom:15px;
+}
+
+/******** FIN POPUP ********/ 
+
+
+
+/* PAGINA DE TRABAJA CON NOSOTROS */
+
+#paseador-body{
+	background: url("../img/fondo-formulario.jpg") no-repeat center center fixed;
+}
+
+#paseador-body .logo-index{
+	text-align:center;
+	margin-top:50px;
+}
+
+#paseador-body .logo-index img{
+	display: inline-block;
+}
+
+
+body#paseador-body .logo-index>p{
+	color: #cfcfcf;
+	font-weight:bold;
+	font-size:2em;
+	height: 65px;
+	margin-top: -6px;
+}
+
+body#paseador-body .head-form{
+	font-weight:bold;
+	color: #425169;
+	text-align:center;
+	margin-top: 0;
+	margin-bottom: 30px;
+	font-family: 'Days One', sans-serif;
+}
+
+body#paseador-body #form_paseador label{
+	color: #425169;
+	font-size:1.2em;
+}
+
+body#paseador-body #form_paseador input,
+body#paseador-body #form_paseador select,
+body#paseador-body #form_paseador textarea{
+	color: #425169;
+	font-size:1.2em;
+	width:100%;
+	margin-bottom:20px;
+	border-radius:5px;
+	border: solid 1px #425169;
+	height:35px;
+}
+
+body#paseador-body #form_paseador input::-webkit-input-placeholder,
+body#paseador-body #form_paseador select::-webkit-input-placeholder,
+body#paseador-body #form_paseador textarea::-webkit-input-placeholder{
+	color: #ccc;
+}
+
+body#paseador-body #form_paseador input{
+	padding: 2px 10px 5px 10px;
+}
+
+body#paseador-body #form_paseador textarea{
+	padding: 4px 10px 5px 10px;
+	height:100px !important;
+	
+}
+
+body#paseador-body #form_paseador select{
+	padding: 2px 0px 5px 6px;
+}
+
+body#paseador-body #form_paseador input.submit-contacto{
+	color: white;
+	font-weight: bold;
+	font-size: 1.3em;
+	border: none;
+	background-color: #34ba88;
+	width: 30%;
+	transition: 0.5s ease;
+}
+
+body#paseador-body #form_paseador input.submit-contacto:hover{
+	background-color: #65e8b7;
+
+}
+
+body#paseador-body #form_paseador .submit{
+	text-align: center;
+}
+
+/* FIN PAGINA DE TRABAJA CON NOSOTROS */
+body#paseador-body #form_paseador input.submit-contacto{
+	color: white;
+	font-weight: bold;
+	font-size: 1.3em;
+	border: none;
+	background-color: #34ba88;
+	width: 30%;
+	transition: 0.5s ease;
+}
+
+body#paseador-body #form_paseador input.submit-contacto:hover{
+	background-color: #65e8b7;
+
+}
+
+body#paseador-body #form_paseador .submit{
+	text-align: center;
+}
+
+/* FIN PAGINA DE TRABAJA CON NOSOTROS */
