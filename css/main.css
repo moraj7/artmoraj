@@ -126,7 +126,7 @@ body#inicio>div.container input:last-child:hover{
 }
 
 #tupeludo .navbar-brand{
-	background-color: #21231f;
+	background-color: #5f5e5e;
 	width: 150px;
 	padding: 12px;
 }
@@ -136,7 +136,7 @@ body#inicio>div.container input:last-child:hover{
 }
 
 #tupeludo .navbar-fixed-top{
-	background: #21231f url("../img/Textura_Navegacion.png") top center repeat-x;
+	background: #5f5e5e url(../img/Textura_Navegacion.png) top center repeat-x;
 	background-size: 320px 50px;
 	-moz-background-size: 320px 50px;
 	-o-background-size: 320px 50px;
@@ -146,13 +146,13 @@ body#inicio>div.container input:last-child:hover{
 }
 
 #tupeludo .navbar-default .navbar-nav>li>a {
-	background-color: #21231f;
+	background-color: #5f5e5e;
 	color: white;
 	transition: 0.5s ease;
 }
 
 #tupeludo .navbar-default .navbar-nav>li>a:hover{
-	background-color:#fdc689;
+	background-color:#54f397e3;
 }
 
 #tupeludo .navbar-default .navbar-nav>.active>a, 
@@ -794,7 +794,7 @@ body#inicio>div.container input:last-child:hover{
 	}
 	
 	#tupeludo .navbar-fixed-top{
-		background: #45e5be url("../img/Textura_Navegacion.png") top center repeat-x;
+		background: #5e5d5e url("../img/Textura_Navegacion.png") top center repeat-x;
 		background-size: 320px 50px;
 		-moz-background-size: 320px 50px;
 		-o-background-size: 320px 50px;
